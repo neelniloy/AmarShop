@@ -8,48 +8,82 @@
     </data>
 
     <RelativeLayout
+        android:padding="10dp"
         android:background="@color/offWhite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/Theme.AmarShopBySEO"
         tools:context=".ProductListFragment">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_alignParentTop="true"
-            android:id="@+id/card_slide"
+        <com.braineer.amarshopbyseo.ClearFocusEditText
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="?attr/colorSurface"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="4dp">
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_search"
+            android:drawableEnd="@drawable/search"
+            android:hint="কাঙ্ক্ষিত পণ্যটি খুঁজুন"
+            android:textSize="16sp"
+            android:iconifiedByDefault="false"
+            android:paddingStart="20dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="2dp" />
 
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/image_slider"
-                android:layout_width="wrap_content"
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:iss_auto_cycle="true"
-                app:iss_period="1000"
-                app:iss_delay="0"/>
+                android:orientation="vertical">
 
-        </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:iss_auto_cycle="true"
+                        app:iss_period="2000"
+                        app:iss_delay="0"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/productRV"/>
+
+            </LinearLayout>
 
 
+        </androidx.core.widget.NestedScrollView>
 
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/mProgressBar"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_centerInParent="true" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/productRV"/>
 
     </RelativeLayout>
 </layout>
