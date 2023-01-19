@@ -11,6 +11,7 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="4dp"
@@ -100,13 +101,15 @@
                 </LinearLayout>
 
                 <Button
-                    android:background="@drawable/back_cart_num"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:background="@drawable/back_cart_no"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/productRowCartBtn"
-                    android:text="add to cart"
+                    android:text="Add to Cart"
                     app:backgroundTint="#DA2079"
                     android:textColor="@color/white"/>
             </LinearLayout>

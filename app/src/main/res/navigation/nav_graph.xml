@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_mainFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
@@ -43,4 +46,9 @@
         android:name="com.braineer.amarshopbyseo.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.braineer.amarshopbyseo.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details" />
 </navigation>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/offWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProductDetailsFragment">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Product Details"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#323232"
+            android:textSize="20sp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
+            android:layout_below="@+id/back"
+            android:id="@+id/card_product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:contentPadding="10dp"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="15dp"
+            android:clickable="false"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Product Name"
+                        android:textColor="#323232"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textColor="#646464"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Product Price"
+                            android:textColor="#DA2079"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category"
+                            android:textColor="#646464"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/product_category"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Product Category"
+                            android:textColor="#312ED1"
+                            android:textSize="14sp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:textColor="#646464"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/product_des"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Product Des"
+                            android:textColor="#323232"
+                            android:textSize="15sp"
+                            />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/back_cart_no"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/productRowCartBtn"
+                        android:text="Buy Now"
+                        app:backgroundTint="#DA2079"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:background="@drawable/back_no_stock"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#C62828"
+                    android:text="স্টকে নেই"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mProgressBar"
+        android:visibility="visible"
+        android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</layout>
